@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发刊词：慈善信托不只是慈善，而是一门关于财富控制的结构艺术</title>
+<style>
+  /* ========== 慈善信托观察 · 公众号排版 ========== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #1a1a1a;
+    background: #fff;
+    max-width: 677px;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== 文章头部 ===== */
+  .article-header {
+    padding: 36px 20px 0;
+    margin-bottom: 0;
+  }
+
+  .header-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-brand-square {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #c0392b;
+    flex-shrink: 0;
+  }
+
+  .header-brand-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+  }
+
+  .header-briefing {
+    font-size: 11px;
+    color: #999;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .header-rule {
+    height: 2px;
+    background: #c0392b;
+    margin: 0 0 18px;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #c0392b;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+
+  .section-label-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #c0392b;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  .article-title {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.35;
+    color: #121212;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+
+  .article-subtitle {
+    font-size: 17px;
+    color: #555;
+    font-weight: 400;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .article-meta {
+    font-size: 13px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .meta-by {
+    font-weight: 700;
+    color: #666;
+    margin-right: 4px;
+  }
+
+  .meta-author {
+    font-style: italic;
+    color: #888;
+  }
+
+  .meta-sep {
+    color: #ccc;
+    margin: 0 10px;
+    font-weight: 300;
+  }
+
+  .meta-date, .meta-readtime {
+    color: #888;
+  }
+
+  /* ===== 配图区域 ===== */
+  .hero-image {
+    margin: 24px 0 0;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 24px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .image-caption {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== 正文区域 ===== */
+  .article-body {
+    padding: 30px 20px;
+  }
+
+  .article-body p {
+    margin-bottom: 20px;
+    text-align: justify;
+    word-break: break-word;
+  }
+
+  /* ===== 导读 ===== */
+  .guide {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .guide-bar {
+    width: 3px;
+    min-height: 80px;
+    background: #c0392b;
+    flex-shrink: 0;
+    border-radius: 1.5px;
+    align-self: stretch;
+  }
+
+  .guide-body {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.9;
+  }
+
+  .guide-label {
+    font-weight: 700;
+    color: #c0392b;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  /* ===== 段落标题 ===== */
+  .section-heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #121212;
+    margin: 40px 0 16px;
+    line-height: 1.4;
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e8;
+  }
+
+  .sub-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 30px 0 12px;
+    line-height: 1.4;
+  }
+
+  /* ===== 引用块 ===== */
+  .pullquote {
+    margin: 30px 0;
+    padding: 20px 24px;
+    border-left: 4px solid #c0392b;
+    background: #fafafa;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .pullquote::before {
+    content: '"';
+    position: absolute;
+    left: 8px;
+    top: -8px;
+    font-size: 60px;
+    color: #c0392b;
+    opacity: 0.2;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1;
+  }
+
+  .pullquote-source {
+    font-size: 13px;
+    color: #999;
+    font-weight: 400;
+    margin-top: 8px;
+    font-style: normal;
+  }
+
+  /* ===== 强调整齐列表 ===== */
+  .bullet-list {
+    margin: 16px 0 20px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .bullet-list li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    background: #c0392b;
+    border-radius: 50%;
+  }
+
+  .numbered-list {
+    margin: 16px 0 20px;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: item;
+  }
+
+  .numbered-list li {
+    counter-increment: item;
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .numbered-list li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background: #c0392b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  /* ===== 文末方块标记 ===== */
+  .end-marker {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #c0392b;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+
+  /* ===== 文章尾部 ===== */
+  .article-footer {
+    padding: 40px 20px 30px;
+    text-align: center;
+    border-top: 1px solid #e8e8e8;
+  }
+
+  .footer-logo {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+  }
+
+  .footer-tagline {
+    font-size: 12px;
+    color: #bbb;
+  }
+
+  /* ===== 内嵌强调 ===== */
+  strong { color: #1a1a1a; }
+  em { font-style: italic; color: #555; }
+</style>
+</head>
+<body>
+
+<!-- ==================== 文章头部 ==================== -->
+<header class="article-header">
+  <div class="header-topbar">
+    <div class="header-brand">
+      <span class="header-brand-square"></span>
+      <span class="header-brand-name">慈善信托观察</span>
+    </div>
+    <span class="header-briefing">Briefing · 2026</span>
+  </div>
+
+  <div class="header-rule"></div>
+
+  <div class="section-label">
+    <span class="section-label-dot"></span>发刊词
+  </div>
+
+  <h1 class="article-title">慈善信托不只是慈善，而是一门关于财富控制的结构艺术</h1>
+  <p class="article-subtitle">我们是谁、我们为什么创办、我们能帮你解决什么——用商学院的方法论，拆解慈善信托的每一层真实逻辑。</p>
+
+  <div class="article-meta">
+    <span class="meta-by">作者</span>
+    <span class="meta-author">慈善信托观察</span>
+    <span class="meta-sep">|</span>
+    <span class="meta-date">2026年6月</span>
+    <span class="meta-sep">|</span>
+    <span class="meta-readtime">约 5 分钟</span>
+  </div>
+
+  <!-- 配图 -->
+  <div class="hero-image">
+    <img src="images/header.png" alt="慈善信托的结构艺术" />
+    <div class="image-caption">建筑的表层是"慈善"，放大镜下是精密的结构工程——法律、税务、治理的层层骨架</div>
+  </div>
+</header>
+
+<!-- ==================== 正文 ==================== -->
+<div class="article-body">
+
+  <!-- 导读 -->
+  <div class="guide">
+    <div class="guide-bar"></div>
+    <div class="guide-body">
+      <div class="guide-label">导读</div>
+      中国慈善信托市场正在爆发，但绝大多数参与者严重低估了它的复杂性。我们创办「慈善信托观察」，以商学院案例方法论为工具，把慈善信托当作一门关于财富控制的结构艺术来审视——不贩卖道德，不沉溺法条，只拆解真实逻辑。
+    </div>
+  </div>
+
+  <!-- 开篇 -->
+  <p>你好，我是「慈善信托观察」。</p>
+
+  <p>中国的慈善信托市场正在爆发，但绝大多数参与者——包括设立者、顾问、乃至监管者——都严重低估了这件事的复杂性。</p>
+
+  <p>过去几个月，我们系统梳理了国内外数百个典型案例：从洛克菲勒家族基金会到国内头部企业家的信托架构，从股权资产装入的税务雷区到家族宪章的治理设计。我们发现一个令人不安的事实——</p>
+
+  <div class="pullquote">
+    市面上关于慈善信托的讨论，要么停留在"做好事"的道德感召，要么沉溺于法条的技术细节，鲜有人真正把它当作一门关于财富控制的结构艺术来审视。
+  </div>
+
+  <p>而这，正是我们创办「慈善信托观察」的原因。</p>
+
+  <!-- 一、我们是谁 -->
+  <h2 class="section-heading">一、我们是谁？</h2>
+
+  <p>我们是一群以商学院案例方法论为工具的观察者。我们的背景横跨法律、税务、家族治理与资产管理。我们不服务于任何单一机构的利益，不销售任何信托产品，不替任何财富管理机构站台。</p>
+
+  <p>我们的唯一立场是：把慈善信托拆开，让你看清楚每一层的真实逻辑。</p>
+
+  <!-- 二、为什么用商学院案例逻辑 -->
+  <h2 class="section-heading">二、为什么要用"商学院案例逻辑"？</h2>
+
+  <p>因为慈善信托本质上是一门跨学科的精密工程——它涉及法律架构、税务筹划、资产配置、家族治理、公益管理、公共关系等多个维度。任何一个环节的疏忽，都可能导致整个安排的失效甚至反噬。</p>
+
+  <p>商学院案例教学法的精髓在于：不预设答案，不回避矛盾，把真实的决策困境摊在桌面上，让数据和逻辑说话。</p>
+
+  <div class="pullquote">
+    我们不告诉你"应该怎么做"，我们展示"别人是怎么做的、结果如何、教训在哪"。你从中汲取什么，取决于你自己的处境和目标。
+  </div>
+
+  <!-- 三、我们能帮你解决什么问题 -->
+  <h2 class="section-heading">三、我们能帮你解决什么问题？</h2>
+
+  <p>如果你是家族办公室负责人、超高净值家族成员、或正在考虑设立慈善信托的企业家，你可能正面临以下困惑：</p>
+
+  <ul class="bullet-list">
+    <li><strong>结构层面：</strong>决策权到底该怎么分配？委托人、受托人、保护人、受益人如何制衡？如何防止"设立时风光无限，运行后无人问津"？</li>
+    <li><strong>税务层面：</strong>股权或房产装入信托的所得税痛点怎么解？持有成本是多少？不同架构下的税务后果差异有多大？</li>
+    <li><strong>治理层面：</strong>家族后代如何参与决策？如何避免巨量财富成为家族矛盾的导火索？如何确保慈善使命不被中途扭曲？</li>
+    <li><strong>声誉层面：</strong>信息披露义务与家族隐私保护的平衡点在哪里？如何避免"高调慈善"带来的舆论反噬？</li>
+  </ul>
+
+  <p>这些问题没有标准答案，但有规律可循。我们的工作就是把规律提炼出来，用案例和数据呈现给您。</p>
+
+  <!-- 四、我们规避什么 -->
+  <h2 class="section-heading">四、我们规避什么？</h2>
+
+  <p>我们克制地保持清醒，并主动规避三样东西：</p>
+
+  <ol class="numbered-list">
+    <li><strong>规避道德绑架。</strong>慈善信托既是公益载体，也是财富控制工具。我们尊重每一个设立者的真实动机。</li>
+    <li><strong>规避技术迷信。</strong>再精巧的法律架构，如果脱离了家族的实际需求和治理能力，也只是纸上谈兵。我们不贩卖"万能方案"，这世上也没有"万能方案"。</li>
+    <li><strong>规避信息噪音。</strong>我们不追逐热点，不制造焦虑。每一篇内容背后，都有至少一个真实案例或数据的支撑。</li>
+  </ol>
+
+  <!-- 五、我们的宗旨 -->
+  <h2 class="section-heading">五、我们的宗旨</h2>
+
+  <div class="pullquote">
+    展示慈善深处的财富智慧，剖析家族传承的底层逻辑。
+  </div>
+
+  <p>我们希望成为中文世界里最冷静、最诚实、最不煽情的慈善信托观察者。我们不替你做决定，但我们确保你做决定时，手里有足够的信息和框架。</p>
+
+  <p>如果你认同这个理念，欢迎关注。接下来的内容，不会让你失望。</p>
+
+  <p style="text-align:center;color:#c0392b;font-weight:700;font-size:18px;margin-top:40px;letter-spacing:2px;">用商学院的眼睛，看懂慈善信托的每一层结构。<span class="end-marker">信</span></p>
+
+</div>
+
+<!-- ==================== 文章尾部 ==================== -->
+<footer class="article-footer">
+  <div class="footer-logo">慈善信托观察</div>
+  <div class="footer-tagline">财富传承 &middot; 信托架构 &middot; 案例研究</div>
+</footer>
+
+<!-- 文章底部导航 -->
+<link rel="stylesheet" href="../../css/style.css">
+<div class="article-bottom-nav">
+  <a href="../../index.html" class="back-btn">返回首页查看往期文章</a>
+  <div class="social-row">
+    <a class="social-link" href="https://channels.weixin.qq.com/" target="_blank" rel="noopener">📺 蝴蝶号</a>
+    <a class="social-link" href="https://www.ximalaya.com/" target="_blank" rel="noopener">🎙 喜马拉雅</a>
+  </div>
+  <div class="brand-line">慈善信托观察</div>
+  <div class="brand-tagline">用商学院的眼睛，看懂慈善信托的每一层结构</div>
+</div>
+
+</body>
+</html>
