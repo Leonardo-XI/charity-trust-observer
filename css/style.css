@@ -277,9 +277,9 @@ body {
 }
 
 .article-bottom-nav .brand-line {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--brand-red);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
   letter-spacing: 2px;
   margin-bottom: 4px;
 }
