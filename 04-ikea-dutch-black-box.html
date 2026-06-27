@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta property="og:title" content="宜家帝国的荷兰黑盒 — 慈善信托观察">
+<meta property="og:description" content="要拆解宜家全球架构的精髓，必须还原二十世纪七八十年代欧洲大陆极度严苛的政治经济前线：">
+<meta property="og:image" content="https://479ed6c591e245079043a08828bc69f2.app.codebuddy.work/assets/og-share.png">
+<meta property="og:url" content="https://479ed6c591e245079043a08828bc69f2.app.codebuddy.work/04-ikea-dutch-black-box.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="慈善信托观察 · Charity Trust Observer">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>宜家帝国的荷兰黑盒 — 慈善信托观察</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif; font-size:16px; line-height:1.85; color:#1a1a1a; background:#fff; max-width:677px; margin:0 auto; padding:0; -webkit-font-smoothing:antialiased; }
+
+  /* ===== 头部 ===== */
+  .topbar { display:flex; justify-content:space-between; align-items:center; padding:20px 0 14px; }
+  .brand { display:flex; align-items:center; gap:8px; }
+  .brand-square { width:14px; height:14px; background:#c0392b; }
+  .brand-name { font-size:15px; font-weight:700; color:#1a1a1a; }
+  .briefing { font-size:11px; color:#999; }
+  .sep-line { height:2px; background:#c0392b; margin-bottom:24px; }
+
+  /* ===== 栏目标签 ===== */
+  .section-label { font-size:12px; color:#c0392b; font-weight:700; margin-bottom:12px; }
+  .section-label::before { content:""; display:inline-block; width:5px; height:5px; background:#c0392b; border-radius:50%; margin-right:6px; vertical-align:middle; position:relative; top:-1px; }
+
+  /* ===== 标题 ===== */
+  .article-title { font-size:28px; font-weight:700; color:#1a1a1a; line-height:1.25; margin-bottom:10px; }
+  .article-subtitle { font-size:17px; color:#888; line-height:1.5; margin-bottom:12px; }
+  .author-line { font-size:13px; color:#666; margin-bottom:0; }
+  .author-line strong { color:#1a1a1a; }
+  .author-line em { font-style:italic; }
+
+  /* ===== 配图 ===== */
+  .hero-image { margin:20px 0 14px; }
+  .hero-image img { width:100%; display:block; }
+  .image-caption { font-size:12px; color:#aaa; font-style:italic; text-align:center; margin-bottom:20px; }
+
+  /* ===== 导读 ===== */
+  .guide { display:flex; align-items:flex-start; gap:14px; padding:22px 20px; margin:24px 0 20px; background:#f9f7f4; border-bottom:1px solid #e8e8e8; }
+  .guide-bar { width:3px; min-height:80px; background:#c0392b; flex-shrink:0; border-radius:1.5px; align-self:stretch; }
+  .guide-body { flex:1; }
+  .guide-label { font-weight:700; color:#c0392b; margin-bottom:4px; font-size:14px; }
+  .guide-text { font-size:15px; color:#333; line-height:1.9; }
+
+  /* ===== 正文 ===== */
+  .section-heading { font-size:18px; font-weight:700; color:#1a1a1a; border-bottom:1px solid #eee; padding-bottom:10px; margin-top:36px; margin-bottom:16px; }
+  .sub-heading { font-size:16px; font-weight:700; color:#1a1a1a; margin:20px 0 10px; }
+  p { font-size:16px; line-height:1.85; color:#1a1a1a; margin-bottom:16px; }
+  .dropcap::first-letter { font-size:48px; float:left; line-height:1; padding-right:6px; color:#c0392b; }
+
+  /* ===== 金句 ===== */
+  .pullquote { margin:30px 0; padding:20px 24px; border-left:4px solid #c0392b; background:#fafafa; font-size:17px; font-weight:600; color:#333; line-height:1.7; position:relative; }
+  .pullquote::before { content:'"'; position:absolute; left:8px; top:-8px; font-size:60px; color:#c0392b; opacity:0.2; font-family:Georgia,"Times New Roman",serif; line-height:1; }
+  .pullquote-source { font-size:13px; color:#999; font-weight:400; margin-top:8px; font-style:normal; }
+
+  /* ===== 暗色信息盒 ===== */
+  .dark-box { background:#f7f5f0; padding:20px 24px; margin:16px 0; border-radius:4px; }
+  .dark-box p { font-size:15px; margin-bottom:10px; }
+  .dark-box p:last-child { margin-bottom:0; }
+
+  /* ===== 信息盒 ===== */
+  .info-box { background:#faf9f6; border-left:3px solid #c0392b; padding:16px 20px; margin:16px 0; }
+  .info-box p { font-size:15px; margin-bottom:6px; }
+
+  /* ===== 符号列表 ===== */
+  .bullet-list { list-style:none; padding-left:0; margin:12px 0 16px; }
+  .bullet-list li { padding-left:16px; position:relative; margin-bottom:10px; font-size:15px; line-height:1.75; color:#333; }
+  .bullet-list li::before { content:"●"; position:absolute; left:0; top:0; color:#c0392b; font-size:8px; line-height:1.75; }
+
+  /* ===== 决策对比表 ===== */
+  .table-wrapper { margin:24px 0; }
+  .table-title { font-size:16px; font-weight:700; color:#1a1a1a; margin-bottom:4px; }
+  .table-subtitle { font-size:12px; color:#999; margin-bottom:12px; }
+  .table-scroll { overflow-x:auto; }
+  .data-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .data-table thead th { padding:12px 10px; text-align:left; border-bottom:2px solid #c0392b; font-weight:700; color:#1a1a1a; background:#fff; white-space:nowrap; }
+  .data-table tbody td { padding:11px 10px; border-bottom:1px solid #eee; vertical-align:top; line-height:1.6; }
+  .data-table tbody tr:nth-child(even) { background:#fafafa; }
+  .table-footnote { margin-top:10px; font-size:12px; color:#888; line-height:1.6; }
+  .scheme-name { font-weight:700; color:#1a1a1a; }
+  .scheme-desc { font-size:11px; color:#999; font-weight:400; }
+  .row-hl { color:#c0392b; font-weight:700; }
+  .row-sm { font-size:11px; color:#999; font-weight:400; }
+
+  /* ===== 双轨分流结构图 ===== */
+  .split-diagram { margin:28px 0; border-top:2px solid #c0392b; border-bottom:2px solid #c0392b; }
+  .split-diagram-header { padding:16px 20px 12px; text-align:center; border-bottom:1px dashed #ddd; }
+  .split-diagram-header .sd-title { font-size:14px; font-weight:700; color:#1a1a1a; }
+  .split-diagram-body { display:flex; }
+  .sd-left { flex:1; padding:18px 16px; border-right:1px dashed #ddd; }
+  .sd-right { flex:1; padding:18px 16px; }
+  .sd-track-label { font-size:12px; color:#c0392b; font-weight:700; margin-bottom:14px; text-align:center; letter-spacing:1px; }
+  .split-node { padding:8px 12px; margin-bottom:10px; border:1px solid #e0e0e0; border-radius:3px; font-size:13px; line-height:1.5; color:#333; background:#fff; text-align:center; }
+  .split-node.emphasis { border-left:3px solid #c0392b; font-weight:700; color:#1a1a1a; }
+  .split-node.small { font-size:11px; color:#666; border:1px dashed #ddd; }
+  .sd-arrow { text-align:center; color:#c0392b; font-size:18px; margin:4px 0; }
+  .sd-note { font-size:11px; color:#999; text-align:center; margin-top:6px; font-style:italic; }
+  .split-diagram-footer { padding:12px 20px; text-align:center; border-top:1px dashed #ddd; }
+  .split-diagram-footer .sd-note { font-size:12px; color:#888; font-style:normal; }
+
+  /* ===== 推演题 ===== */
+  .exercise-card { background:#faf9f6; border:1px solid #e8e8e8; border-left:3px solid #c0392b; padding:16px 20px; margin:14px 0; }
+  .exercise-card .ex-num { font-size:12px; color:#c0392b; font-weight:700; margin-bottom:6px; }
+  .exercise-card p { font-size:15px; margin-bottom:6px; }
+
+  /* ===== 文末标记 ===== */
+  .end-marker-wrapper { display:inline; }
+  .end-marker { display:inline; width:18px; height:18px; background:#c0392b; color:#fff; font-size:11px; font-weight:700; text-align:center; line-height:18px; position:relative; top:-2px; margin-left:3px; }
+
+  /* ===== Footer ===== */
+  .article-footer { margin-top:30px; padding:18px 20px; text-align:center; }
+  .footer-logo { display:inline-block; color:#888; font-size:15px; font-weight:400; letter-spacing:2px; margin-bottom:4px; }
+  .footer-tagline { font-size:11px; color:#888; }
+</style>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+  <!-- 头部 -->
+  <div class="topbar">
+    <div class="brand"><div class="brand-square"></div><span class="brand-name">慈善信托观察</span></div>
+    <span class="briefing">Briefing · 2026</span>
+  </div>
+  <div class="sep-line"></div>
+
+  <div class="section-label">财富传承 · 案例研究 04</div>
+
+  <div class="article-title">宜家帝国的荷兰黑盒</div>
+  <div class="article-subtitle">非营利地基上的全球商业控税与反垄断防御矩阵</div>
+
+  <div class="author-line">
+    <strong>作者</strong> <em>慈善信托观察</em> &nbsp;|&nbsp; 2026年6月 &nbsp;|&nbsp; 约8分钟
+  </div>
+
+  <!-- 配图 -->
+  <div class="hero-image">
+    <img src="/images/04-ikea-dutch-black-box/header.png" alt="宜家帝国荷兰黑盒：非营利外壳下的商业控制权精算">
+  </div>
+  <div class="image-caption">荷兰非营利基金会（Stichting）作为名义"黑盒"外壳，通过列支敦士登特许权管道完成利润的跨国精确调度。</div>
+
+  <!-- 导读 -->
+  <div class="guide">
+    <div class="guide-bar"></div>
+    <div class="guide-body">
+      <div class="guide-label">导读</div>
+      <div class="guide-text">宜家创始人坎普拉德做了一件反直觉的事：将全球零售帝国的全数股权，无偿捐赠给一家"没有所有者、没有受益人"的荷兰非营利基金会，在法律上消灭了"宜家有主"这一事实。这不是道德救赎，而是一道冷血的商业方程——牺牲名义所有权，换取遗产税免疫、反垄断规避、家族控制权永续。本文拆解这套"荷兰黑盒+列支敦士登暗管"的双层架构，看透坎普拉德如何用"死物"锁住活钱。</div>
+    </div>
+  </div>
+
+  <!-- 正文 -->
+  <h2 class="section-heading">一、背景：北欧高税率、反垄断绞杀与接班人内耗危机</h2>
+
+  <p class="dropcap">要拆解宜家全球架构的精髓，必须还原二十世纪七八十年代欧洲大陆极度严苛的政治经济前线：</p>
+
+  <p><strong>第一，福利国家的"重税清洗"。</strong>彼时瑞典推行激进的高福利税制，边际所得税率一度突破85%，并伴随高额的财富税与代际遗产税。若坎普拉德维持传统的瑞典本土个人产权持股，一旦其发生意外，国家机器将通过遗产税合法抽干宜家的现金流，甚至迫使家族肢解、变卖核心实业以凑齐天价税款。</p>
+
+  <p><strong>第二，跨国扩张中的"垄断标靶"。</strong>随着宜家在欧洲及北美市场份额急剧膨胀，作为一个中心化的超级跨国巨头，它极易沦为各国反垄断法与反托拉斯审查的标靶。</p>
+
+  <p><strong>第三，代际分家的"熵增夺权"。</strong>坎普拉德有三个儿子。随着帝国资产呈几何级数增长，后代若因经营理念离散而对簿公堂，通过司法诉讼瓜分集团股权，宜家势必走向四分五裂。</p>
+
+  <p>为了确保帝国不被税收腰斩、不被政治舆论绞杀、不被后代拆台，坎普拉德在专业法务与精算团队的协助下，展开了一场长达数年的迁徙。</p>
+
+  <div class="pullquote">
+    在法律层面上消灭"宜家有主"这一事实，把帝国的所有权交还给一个"死物"，以此换取控制权的永续流转。
+  </div>
+
+  <h2 class="section-heading">二、核心决策点：消灭所有权，才能买断控制权</h2>
+
+  <p>面对上述系统性风险，坎普拉德面临着三种完全不同的产权博弈路径：</p>
+
+  <ul class="bullet-list">
+    <li><strong>选择A：保留传统家族持股，设立常规离岸家族信托。</strong>能保住后代对资产的直接所有权，但在面对瑞典、德国等主权国家的强力税务穿透，以及欧盟日益严格的跨国反避税审计时，常规信托极易被认定为"实质受益"，面临被强行刺破的风险。</li>
+    <li><strong>选择B：将企业整体上市（IPO），稀释股权。</strong>可以变现巨额财富，但代价是彻底交出企业的方向盘。宜家必须向资本市场和公众公开所有商业机密，且随时面临被恶意收购的风险。</li>
+    <li><strong>选择C：所有权非营利化，控制权家族化。</strong>将零售业务的所有权"无偿捐赠"给非营利基金会，名义上不再属于个人，彻底免疫一切遗产税与反垄断主体的认定；同时，通过另一条隐秘的离岸特许权暗道，将核心利润源源不断地抽回家族口袋。</li>
+  </ul>
+
+  <p>坎普拉德最终选择了C。</p>
+
+  <h2 class="section-heading">三、方案设计：荷属非营利基金会与特许经营权的"双轨分层"</h2>
+
+  <p>这套方案被公认为西方近代资产防御的巅峰之作，其核心在于创造性地运用了荷兰与列支敦士登的规则差，将宜家一分为二，搭建起阳线与暗线互不穿透的双层闭环。</p>
+
+  <div class="info-box">
+    <p><strong>核心公式：</strong>荷兰 Stichting（无股东、无受益人、免税外壳） × 列支敦士登特许经营权管道（3% 全球Royalty抽血） = 所有权蒸发 + 控制权永续 + 利润暗渠归巢</p>
+  </div>
+
+  <h3 class="sub-heading">1. 阳线黑盒：荷兰英格卡基金会的名义垄断</h3>
+
+  <p>1982年，坎普拉德在荷兰创办了<strong>"斯帝廷·英格卡基金会"（Stichting INGKA Foundation）</strong>。在荷兰法律中，这种基金会（Stichting）是一种极其特殊的法人类别，它<strong>没有股东，没有确定的受益人</strong>，且只要章程名义上符合"支持建筑与设计领域的创新"等公益慈善目的，即可享受极高额的免税特权。</p>
+
+  <p>坎普拉德随即将负责宜家全球绝大多数零售门店运营的母公司——<strong>"英格卡集团"（INGKA Holding）</strong>的全部股权，悉数无偿让渡给了英格卡基金会。</p>
+
+  <div class="dark-box">
+    <p><strong>产权的绝对消灭：</strong>从法律生效那一刻起，宜家的零售业务在法律名义上变成了"无主之物"。它不再属于坎普拉德个人，也不属于他的任何一个儿子。国家无法再对这笔资产征收任何遗产税，家族成员也无法在离婚或债务清算中追索这笔资产。</p>
+    <p><strong>控制权的死锁：</strong>虽然所有权没有了，但英格卡基金会的董事会（五人委员会）核心席位，通过章程内部流转机制，由坎普拉德家族成员及极少数心腹死死控盘。</p>
+  </div>
+
+  <h3 class="sub-heading">2. 暗线抽血：列支敦士登的特许经营权黑盒</h3>
+
+  <p>如果英格卡基金会仅仅用来装载零售业务，还不足以体现坎普拉德的商业理性。为了实现资产的最优调度与家族成员的隐性激励，他在架构中设计了第二层完全独立的暗线：<strong>英特·宜家系统（Inter IKEA Systems B.V.）</strong>。</p>
+
+  <p>英特·宜家系统注册于避税天堂列支敦士登，通过另一只隐秘的家族信托（Interogo Foundation）持有，它拥有"IKEA"这一核心品牌的所有知识产权与特许经营权。</p>
+
+  <div class="pullquote">
+    全球所有宜家门店每卖出一张桌子或一把椅子，都必须将销售额的3%作为"特许经营权使用费"，合法、无损地支付给英特·宜家系统。
+  </div>
+
+  <p>通过这道3%的管道，宜家全球零售网络中利润率最高、最肥美的那部分现金流，从名义上的"非营利慈善体系"中精准抽离，跨越国境，无缝流入了由坎普拉德家族真正绝对控制的离岸信托与商业实体中。</p>
+
+  <h2 class="section-heading">四、控制权穿透与资金流动逻辑</h2>
+
+  <p>以下结构图直观展示宜家如何利用非营利外壳进行全球商业利润的腾挪：</p>
+
+  <div class="split-diagram">
+    <div class="split-diagram-header">
+      <div class="sd-title">坎普拉德家族 / 核心权力决策委员会</div>
+      <div class="sd-note" style="margin-top:6px;">← 通过董事会章程100%锁定 ┃ 通过离岸信托隐秘受益 →</div>
+    </div>
+    <div class="split-diagram-body">
+      <div class="sd-left">
+        <div class="sd-track-label">阳线 · 非营利外壳</div>
+        <div class="split-node emphasis">斯帝廷·英格卡基金会 (荷兰)</div>
+        <div class="sd-note">名义上的非营利/免税资产黑盒<br>无股东 · 无受益人</div>
+        <div class="sd-arrow">↓ 100%控股</div>
+        <div class="split-node">英格卡集团 (INGKA Holding)</div>
+        <div class="sd-note">全球数万家宜家零售门店</div>
+        <div class="sd-arrow">↓</div>
+        <div class="split-node small">每年象征性支出低额慈善<br>将海量商业利润免税留存</div>
+      </div>
+      <div class="sd-right">
+        <div class="sd-track-label">暗线 · 特许权管道</div>
+        <div class="split-node emphasis">英特·宜家系统 (列支敦士登)</div>
+        <div class="sd-note">品牌知识产权/特许经营权拥有者<br>由 Interogo Foundation 信托持有</div>
+        <div class="sd-arrow">↑ 3% 特许权使用费</div>
+        <div class="split-node">全球门店销售额 3%</div>
+        <div class="sd-note">Royalty Fees 合法无损回流</div>
+        <div class="sd-arrow">↑</div>
+        <div class="split-node small">利润暗渠：从非营利体系<br>精准抽离→离岸归巢</div>
+      </div>
+    </div>
+    <div class="split-diagram-footer">
+      <div class="sd-note">阳线防御（免税+反垄断免疫） ⇄ 暗线进攻（利润抽血+家族控制）</div>
+    </div>
+  </div>
+
+  <h2 class="section-heading">五、结果与影响</h2>
+
+  <p><strong>1. 规避反垄断重锤：</strong>由于荷兰基金会"没有所有者"的法理特性，在面对欧盟反垄断调查时，监管机构极难将其定义为传统的"垄断资本主体"，从而为宜家的全球扩张争取到了极大的规则弹性。</p>
+
+  <p><strong>2. 财富的无损代际交接：</strong>坎普拉德于2018年去世时，其庞大的家居帝国没有爆发任何股权争夺战，也没有向任何国家缴纳一分钱的遗产税。三个儿子各司其职，作为高级职业操盘手继续运转机器。</p>
+
+  <p><strong>3. 声誉的极致套利：</strong>宜家长期维持着"绿色、环保、利他"的非营利好公民形象，而其底层的百亿现金流，则通过3%的特许权管道，在列支敦士登和卢森堡之间完成了完美的跨国税率差套利。</p>
+
+  <div class="pullquote">
+    坎普拉德于2018年去世时，庞大的家居帝国没有爆发任何股权争夺战，也没有向任何国家缴纳一分钱的遗产税。
+  </div>
+
+  <h2 class="section-heading">六、讨论与启示</h2>
+
+  <div class="exercise-card">
+    <div class="ex-num">推演题 01 · 结构识别</div>
+    <p>坎普拉德是如何通过"牺牲所有权"来换取"永续控制权"的？这种将资产捐给"死物"的做法，对中国一代企业家在面对"子女不愿接班"或"接班带宽不足"时有何借鉴意义？</p>
+  </div>
+
+  <div class="exercise-card">
+    <div class="ex-num">推演题 02 · 政策博弈</div>
+    <p>欧盟委员会自2017年起对宜家在荷兰的税务安排展开了长达数年的深度调查，认为其"特许经营权抽血"本质上属于恶意侵蚀税基。<strong>讨论：</strong>如果未来全球最低企业税率补丁全面强行落地，认定此类非营利基金会的持股平台必须进行实质性穿透，宜家的这套双层嵌套黑盒是否还会存在生存空间？</p>
+  </div>
+
+  <div class="exercise-card">
+    <div class="ex-num">推演题 03 · 核心脆弱点</div>
+    <p>当财富跟后代的个人产权彻底切割后，家族成员将失去对底层实业的终极所有权，退化为纯粹的代理人。<strong>讨论：</strong>在这种"所有权虚无"的架构下，如何防范未来的第四代、第五代操盘手走向官僚化和隐性腐败？当亲情被算法代替，这台冰冷的商业机器还能跑多远？</p>
+  </div>
+
+  <!-- 编者后记 -->
+  <h2 class="section-heading">编者后记</h2>
+
+  <p>从前三篇案例走到这里，一条越来越清晰的线索浮现出来：卡内基用"公式"锁定基金会方向，洛克菲勒用"双层架构"构建防火墙，何享健用"中介嵌套"在中国本土做物理剥离——而坎普拉德走得更远，他用一只"没有所有者"的荷兰黑盒，直接让宜家在法律意义上变成了"无主之物"。</p>
+
+  <p>这不是慷慨，而是极致的理性自负。坎普拉德的赌注是：只要我把所有权彻底蒸发掉，就没有人能收我的税、拆我的台、抢我的方向盘。代价是：他的子孙也将永远无法真正"拥有"宜家，只能作为操盘手，在一台冰冷的制度机器里领工资。这是财富传承的最高形态，还是自我异化的终极版本？答案，取决于你站在盒子的哪一边。<span class="end-marker-wrapper"><span class="end-marker">信</span></span></p>
+
+  <!-- 参考文献 -->
+  <div style="border-top:1px solid #eee; padding-top:20px; margin-top:20px;">
+    <p style="font-size:14px; font-weight:700; color:#1a1a1a;">参考文献</p>
+    <p style="font-size:13px; color:#888; line-height:1.8;">
+      1. 欧盟委员会竞争总局官方反垄断与国家援助调查报告（Case SA.46470 — Tax treatment of Inter IKEA in the Netherlands）<br>
+      2. 荷兰斯帝廷·英格卡基金会（Stichting INGKA Foundation）官方章程与法理公示文件（荷兰商会KVK登记备案）<br>
+      3. 英特·宜家集团历年发布《Yearly Summary》（2016–2025）<br>
+      4. 《欧洲信托与基金会法判例集》之荷兰"Stichting"实体性质裁决专题<br>
+      5. Kamprad, I., &amp; Torekull, B. (1998). <em>Leading by Design: The IKEA Story.</em> HarperBusiness.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <div class="article-footer">
+    <div class="footer-logo">慈善信托观察</div>
+    <div class="footer-tagline">财富传承的结构艺术</div>
+  </div>
+<!-- 文章底部导航 -->
+<link rel="stylesheet" href="/css/style.css">
+<div class="article-bottom-nav">
+  <a href="/index.html" class="back-btn">返回首页查看往期文章</a>
+  <div class="social-row">
+    <a class="social-link" href="https://channels.weixin.qq.com/" target="_blank" rel="noopener"><img src="/assets/channels-icon.svg" alt="" width="18" height="18" style="vertical-align:middle"> 蝴蝶号</a>
+    <a class="social-link" href="https://xima.tv/1_7uO7bj?_sonic=0" target="_blank" rel="noopener"><img src="/assets/xmly-icon.svg" alt="" width="18" height="18" style="vertical-align:middle"> 喜马拉雅</a>
+  </div>
+  <div class="brand-line">慈善信托观察</div>
+  <div class="brand-tagline">用商学院的眼睛，看懂慈善信托的每一层结构</div>
+</div>
+<div style="text-align:center;padding:20px 0;font-size:13px;color:#666;">
+  <span id="busuanzi_container_site_pv" style="display:none">
+    总访问 <span id="busuanzi_value_site_pv"></span> 次 &nbsp;|&nbsp;
+  </span>
+  <span id="busuanzi_container_page_pv" style="display:none">
+    本页阅读 <span id="busuanzi_value_page_pv"></span> 次 &nbsp;|&nbsp;
+  </span>
+  <span id="busuanzi_container_site_uv" style="display:none">
+    访客数 <span id="busuanzi_value_site_uv"></span> 人
+  </span>
+</div>
+</body>
+</html>
