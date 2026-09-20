@@ -8,17 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping IndexNow (auto on push)
+        env:
+          HOST: ctobserver.top
+          KEY: b00ddff1324ea3708bb20b0b9b870072
         run: |
-          python3 - <<'PYEOF'
-          import urllib.request, json, re
-          host = "ctobserver.top"
-          key = "b00ddff1324ea3708bb20b0b9b870072"
-          sm = urllib.request.urlopen(f"https://{host}/sitemap.xml", timeout=30).read().decode()
-          urls = [u.strip() for u in re.findall(r"<loc>(.*?)</loc>", sm) if u.strip()]
-          payload = {"host":host,"key":key,"keyLocation":f"https://{host}/{key}.txt","urlList":urls}
-          req = urllib.request.Request("https://api.indexnow.org/indexnow",
-              data=json.dumps(payload).encode(),
-              headers={"Content-Type":"application/json"}, method="POST")
-          with urllib.request.urlopen(req, timeout=30) as r:
-              print("IndexNow", r.status, r.read().decode()[:200])
-          PYEOF
+          set -e
+          URLS=$(curl -fsS -A "Mozilla/5.0" "https://$HOST/sitemap.xml" | grep -oP '<loc>\K[^<]+')
+          JSON=$(printf '%s\n' "$URLS" | jq -R -s -c --arg host "$HOST" --arg key "$KEY" 'split("\n")|map(select(length>0))|{host:$host,key:$key,keyLocation:"https://\($host)/\($key).txt",urlList:.}')
+          echo "payload: $JSON"
+          curl -fsS -A "Mozilla/5.0" -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json" -d "$JSON" -w "\nIndexNow HTTP %{http_code}\n"
+
