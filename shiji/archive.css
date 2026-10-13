@@ -84,6 +84,8 @@ input[type=search]:focus{outline:none;border-color:var(--brick-l)}
 .star.pub{border-left:4px solid var(--brick)}
 .star.coded{border-left:4px dashed var(--brick-l)}
 .star.rec{border-left:4px dotted var(--faint);background:#fdfcfb}
+/* 法规页的要点卡：不带写作进度色带，故不画左边线 */
+.star.plain{border-left:1px solid var(--line)}
 .star .nm{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.5}
 .star.rec .nm{color:var(--ink2);font-weight:600}
 .star:hover .nm{color:var(--brick)}
