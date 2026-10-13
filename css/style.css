@@ -321,3 +321,83 @@ body {
 .archive-entry .ae-go { font-size: 13px; font-weight: 600; color: var(--brand-red); margin-top: 6px; }
 @media (max-width: 480px) { .archive-entry .ae-r { text-align: left; } }
 /* ARCHIVE_ENTRY_END */
+
+/* ============================================
+   卡片堆叠版式（deck）+ 资料库蓝色主题
+   首页 /library/ 双卡互探：前卡完整展示，
+   后卡只露顶部一角（logo + 卡片顶边），点击切换。
+   ============================================ */
+
+.deck-body {
+  background: #ece5e0;
+}
+
+/* ========== 叠卡标签（首页 / 资料库页共用） ==========
+   形式：当前卡的 logo 长在色块上沿、探出一个方形犄角；
+   旁边空开一点，是另一张卡探出的犄角，点击即切换。 */
+.deck-tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 0 0;
+  position: relative;
+  z-index: 3;
+}
+.deck-tab {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px 9px 0 0;
+  overflow: hidden;
+  display: block;
+  box-shadow: 0 -2px 10px rgba(0,0,0,.10);
+  border: 1px solid rgba(255,255,255,.35);
+  border-bottom: 0;
+  transition: transform .2s, box-shadow .2s;
+}
+.deck-tab img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* 当前页犄角：压在卡片之上，颜色更实 */
+.deck-tab--active {
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 -3px 14px rgba(0,0,0,.16);
+}
+/* 另一张卡的可点犄角：略暗，悬停上浮 */
+.deck-tab:not(.deck-tab--active):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 -8px 20px rgba(0,0,0,.18);
+}
+
+/* 前卡：整站内容装进卡片 */
+.front-card {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--bg-page);
+  border-radius: 0 16px 16px 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.10), 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+/* logo 已上移为犄角，头部只需标题与反白副标题 */
+.front-card .site-header { padding-top: 24px; }
+
+/* 资料库（全史）页：卡片更宽，容得下两列档案 */
+.front-card--wide { max-width: 940px; }
+
+/* 资料库蓝色主题：换调色板变量即可整体换色 */
+.theme-blue {
+  --brand-red: #2f6690;
+  --brand-red-dark: #275677;
+}
+
+@media (max-width: 480px) {
+  .deck-tabs { padding-top: 16px; gap: 10px; }
+  .deck-tab { width: 36px; height: 36px; border-radius: 8px 8px 0 0; }
+}
